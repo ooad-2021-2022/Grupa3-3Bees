@@ -1,0 +1,49 @@
+@model SarajevoEvents.Models.Karta
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Karta</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="IDDogadjaj" class="control-label"></label>
+                <input asp-for="IDDogadjaj" class="form-control" />
+                <span asp-validation-for="IDDogadjaj" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IDRegistrovaniKorisnik" class="control-label"></label>
+                <select asp-for="IDRegistrovaniKorisnik" class="form-control" asp-items="ViewBag.IDRegistrovaniKorisnik"></select>
+                <span asp-validation-for="IDRegistrovaniKorisnik" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IDPlacanje" class="control-label"></label>
+                <input asp-for="IDPlacanje" class="form-control" />
+                <span asp-validation-for="IDPlacanje" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cijena" class="control-label"></label>
+                <input asp-for="cijena" class="form-control" />
+                <span asp-validation-for="cijena" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "Admin panel";
+}
+
+
+<script type="text/css"></script>
+
+<div class="background">
+    <h1 class="heading">Admin panel</h1>
+    <div class="d-grid gap-2 col-3 mx-auto">
+        <div class="d-grid gap-2">
+            <a asp-area="" asp-controller="RegistrovaniKorisnik" asp-action="Index"
+                class="btn btn-light btn-rounded" type="button">Registrovani korisnici</a>
+        </div>
+        <div class="d-grid gap-2">
+            <a asp-area="" asp-controller="PoslovniKorisnik" asp-action="Index" class="btn btn-light btn-rounded"
+                type="button">Poslovni korisnici</a>
+        </div>
+        <div class="d-grid gap-2">
+            <a asp-controller="Dogadjaj" asp-action="Index" class="btn btn-light btn-rounded admin-button"
+                type="button">Događaji</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+@{
+    ViewData["Title"] = "Gdje otići";
+    var rnd = ViewData["rnd"] as Random;
+}
+
+<div class="background">
+    <div class="text-center">
+        <h1 class="heading">Gdje otići?</h1>
+        <div class="cards">
+            <div class="card">
+                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                    <img src=@($"https://picsum.photos/{rnd.Next(600,700)}") class="img-fluid card-image" />
+                    <a asp-area="" asp-controller="Dogadjaj" asp-action="Ukratko" asp-route-kategorija=1>
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Kultura</h5>
+                    <p class="card-text">Ovdje ćeš ti dodati neki tekst.</p>
+                    <a asp-area="" asp-controller="Dogadjaj" asp-action="Ukratko" asp-route-kategorija=1
+                        class="btn btn-primary">Detaljno</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                    <img src=@($"https://picsum.photos/{rnd.Next(600,700)}") class="img-fluid card-image" />
+                    <a asp-area="" asp-controller="Dogadjaj" asp-action="Ukratko" asp-route-kategorija=2>
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Muzika</h5>
+                    <p class="card-text">Ovdje ćeš ti dodati neki tekst.</p>
+                    <a asp-area="" asp-controller="Dogadjaj" asp-action="Ukratko" asp-route-kategorija=2
+                        class="btn btn-primary">Detaljno</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                    <img src=@($"https://picsum.photos/{rnd.Next(600,700)}") class="img-fluid card-image" />
+                    <a asp-area="" asp-controller="Dogadjaj" asp-action="Ukratko" asp-route-kategorija=3>
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Sport</h5>
+                    <p class="card-text">Ovdje ćeš ti dodati neki tekst.</p>
+                    <a asp-area="" asp-controller="Dogadjaj" asp-action="Ukratko" asp-route-kategorija=3
+                        class="btn btn-primary">Detaljno</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                    <img src=@($"https://picsum.photos/{rnd.Next(600,700)}") class="img-fluid card-image" />
+                    <a asp-area="" asp-controller="Dogadjaj" asp-action="Ukratko" asp-route-kategorija=4>
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Kino</h5>
+                    <p class="card-text">Ovdje ćeš ti dodati neki tekst.</p>
+                    <a asp-area="" asp-controller="Dogadjaj" asp-action="Ukratko" asp-route-kategorija=4
+                        class="btn btn-primary">Detaljno</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

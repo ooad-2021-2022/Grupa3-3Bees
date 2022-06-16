@@ -1,0 +1,22 @@
+.background {
+  background-image: url("/static/loginbckg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 16 auto 0 auto;
+}
+
+.admin-button {
+  margin: 16px 0 16px 0;
+}
+
+.button-block {
+  margin-top: 48px;
+}
+
+.heading {
+  text-align: center;
+  color: #fff;
+}

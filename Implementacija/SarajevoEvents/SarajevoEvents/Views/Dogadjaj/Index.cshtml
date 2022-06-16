@@ -1,0 +1,81 @@
+@model IEnumerable<SarajevoEvents.Models.Dogadjaj>
+
+@{
+    ViewData["Title"] = "Index";
+    var rnd = ViewData["rnd"] as Random;
+}
+
+
+
+<div class="background">
+    <h1 class="heading">Događaji</h1>
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <div class="cards">
+        @foreach (var item in Model)
+        {
+            <div class="card">
+                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                    <img src=@($"https://picsum.photos/{rnd.Next(600,700)}") class="img-fluid card-image" />
+                    <a asp-area="" asp-controller="Dogadjaj" asp-action="Ukratko" asp-route-kategorija=1>
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">@Html.DisplayFor(modelItem => item.vrstaDogadjaja)</h5>
+                    <p class="card-text">Opis događaja.</p>
+                    <ul class="list-group list-group-light list-group-small">
+                        <li class="list-group-item px-4">Organizator: @Html.DisplayFor(modelItem =>
+                        item.PoslovniKorisnik.ImePrezime)</li>
+                        <li class="list-group-item px-4">Datum: @Html.DisplayFor(modelItem => item.datumOdrzavanja)</li>
+                        <li class="list-group-item px-4">Cijena karte: @Html.DisplayFor(modelItem => item.cijenaKarte)KM
+                        </li>
+                    </ul>
+                    <a asp-area="" asp-controller="Dogadjaj" asp-action="Ukratko" asp-route-kategorija=1
+                    class="btn btn-primary">Kupi kartu</a>
+                </div>
+            </div>
+            <ul>
+                <li><a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |</li>
+                <li><a asp-action="Details" asp-route-id="@item.ID">Details</a> |</li>
+                <li><a asp-action="Delete" asp-route-id="@item.ID">Delete</a></li>
+            </ul>
+        }
+    </div>
+</div>
+@* <table class="table">
+    <tbody>
+    @foreach (var item in Model)
+    {
+    <tr>
+    <td>
+    @Html.DisplayFor(modelItem => item.datumOdrzavanja)
+    </td>
+    <td>
+    @Html.DisplayFor(modelItem => item.vrstaDogadjaja)
+    </td>
+    <td>
+    @Html.DisplayFor(modelItem => item.potrebnaKarta)
+    </td>
+    <td>
+    @Html.DisplayFor(modelItem => item.cijenaKarte)
+    </td>
+    <td>
+    @Html.DisplayFor(modelItem => item.potrebnaRezervacija)
+    </td>
+    <td>
+    @Html.DisplayFor(modelItem => item.brojNagradnihBodova)
+    </td>
+    <td>
+    @Html.DisplayFor(modelItem => item.PoslovniKorisnik.ID)
+    </td>
+    <td>
+    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+    </td>
+    </tr>
+    }
+    </tbody>
+    </table> *@
