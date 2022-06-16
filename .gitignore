@@ -99,6 +99,7 @@ StyleCopReport.xml
 *.scc
 
 Implementacija/SarajevoEvents/SarajevoEvents/appsettings.json
+Implementacija/SarajevoEvents/SarajevoEvents/appsettings.Development.json
 
 # Chutzpah Test files
 _Chutzpah*
